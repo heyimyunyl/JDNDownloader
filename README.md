@@ -1,10 +1,10 @@
-# Just Dance Now Asset Downloader (JDNAssetDownloader)
+# Just Dance Now Asset Downloader (JDNDownloader)
 
-JDNAssetDownloader is a tool for downloading textures, audios and video previews from Just Dance Now' old servers.
+JDNDownloader is a tool for downloading textures, audios and video previews from Just Dance Now' old servers.
 
 ## Installation & Usage
 
-Just download the zip file from the releases page and run the .py file. It will download everything under the folder called
+Just download the zip file from the releases page and run the .py file. If you want to download songs that you want, you can edit the songs.json file by replacing the codenames with case sensitive. It will download everything under the folder called
 "songs" and their original path.
 
 ## Contributing
