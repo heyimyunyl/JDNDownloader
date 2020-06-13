@@ -4,31 +4,42 @@ from pathlib import Path
 from urllib.error import HTTPError
 
 import requests
-
+print("Just Dance Now Downloader by Yunyl 1.0.0")
 SONG_JSON_PATH = './songs.json'
 SONG_BASE_URL = 'http://jdnowweb-s.cdn.ubi.com/uat/release_tu2/20150928_1740/songs/'
 LOCAL_PATH = 'songs/'
 
 files_to_download = [
-    "/assets/web/{1}.jpg",
-    "/assets/web/{1}_small.jpg",
-    "/assets/web/pictos-sprite.png",
-    "/assets/web/pictos-sprite.css",
-    "/assets/web/pictos-sprite.css",
-    "/assets/web/{0}.ogg",
-    "/assets/web/{0}.mp3",
-    "/assets/common/coaches/{1}_coach_1.png",
-    "/assets/common/coaches/{1}_coach_2.png",
-    "/assets/common/coaches/{1}_coach_3.png",
-    "/assets/common/coaches/{1}_coach_4.png",
-    "/assets/common/coaches/{1}_coach_1_big.png",
-    "/assets/common/coaches/{1}_coach_2_big.png",
-    "/assets/common/coaches/{1}_coach_3_big.png",
-    "/assets/common/coaches/{1}_coach_4_big.png",
-    "/data/moves/{0}_moves0.json",
-    "/data/moves/{0}_moves1.json",
-    "/data/moves/{0}_moves2.json",
-    "/data/moves/{0}_moves3.json",
+    "/songs/assets/web/{1}.jpg",
+    "/songs/assets/web/{1}_small.jpg",
+    "/songs/assets/web/pictos-sprite.png",
+    "/songs/assets/web/pictos-sprite.css",
+    "/songs/assets/web/pictos-sprite.css",
+    "/songs/assets/web/{0}.ogg",
+    "/songs/assets/web/{0}.mp3",
+    "/songs/assets/common/coaches/{1}_coach_1.png",
+    "/songs/assets/common/coaches/{1}_coach_2.png",
+    "/songs/assets/common/coaches/{1}_coach_3.png",
+    "/songs/assets/common/coaches/{1}_coach_4.png",
+    "/songs/assets/common/coaches/{1}_coach_1_big.png",
+    "/songs/assets/common/coaches/{1}_coach_2_big.png",
+    "/songs/assets/common/coaches/{1}_coach_3_big.png",
+    "/songs/assets/common/coaches/{1}_coach_4_big.png",
+    "/songs/data/moves/{0}_moves0.json",
+    "/songs/data/moves/{0}_moves1.json",
+    "/songs/data/moves/{0}_moves2.json",
+    "/songs/data/moves/{0}_moves3.json",
+	"/dist/bundle/{0}.zip",
+	"/dist/bundle/{0}_1.zip",
+	"/dist/bundle/{0}_2.zip",
+	"/dist/bundle/{0}_3.zip",
+	"/dist/bundle/{0}_4.zip",
+	"/dist/bundle/{0}_5.zip",
+	"/dist/bundle/{0}_6.zip",
+	"/dist/bundle/{0}_7.zip",
+	"/dist/bundle/{0}_8.zip",
+	"/dist/bundle/{0}_9.zip",
+	"/dist/bundle/{0}_10.zip",
 ]
 
 if __name__ == '__main__':
