@@ -6,7 +6,7 @@ from urllib.error import HTTPError
 import requests
 print("Just Dance Now Downloader by Yunyl 1.0.0")
 SONG_JSON_PATH = './songs.json'
-SONG_BASE_URL = 'http://jdnowweb-s.cdn.ubi.com/uat/release_tu2/20150928_1740/songs/'
+SONG_BASE_URL = 'http://jdnowweb-s.cdn.ubi.com/uat/release_tu2/20150928_1740'
 LOCAL_PATH = 'songs/'
 
 files_to_download = [
