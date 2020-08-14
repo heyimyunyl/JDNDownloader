@@ -4,31 +4,31 @@ from pathlib import Path
 from urllib.error import HTTPError
 
 import requests
-print("Just Dance Now Downloader by Yunyl 1.0.1")
+print("Just Dance Now Downloader by Yunyl 1.0.0")
 SONG_JSON_PATH = './songs.json'
 SONG_BASE_URL = 'http://jdnowweb-s.cdn.ubi.com/uat/release_tu2/20150928_1740'
-LOCAL_PATH = 'songs/'
+LOCAL_PATH = 'files/'
 
 files_to_download = [
-    "/songs/assets/web/{1}.jpg",
-    "/songs/assets/web/{1}_small.jpg",
-    "/songs/assets/web/pictos-sprite.png",
-    "/songs/assets/web/pictos-sprite.css",
-    "/songs/assets/web/pictos-sprite.css",
-    "/songs/assets/web/{0}.ogg",
-    "/songs/assets/web/{0}.mp3",
-    "/songs/assets/common/coaches/{1}_coach_1.png",
-    "/songs/assets/common/coaches/{1}_coach_2.png",
-    "/songs/assets/common/coaches/{1}_coach_3.png",
-    "/songs/assets/common/coaches/{1}_coach_4.png",
-    "/songs/assets/common/coaches/{1}_coach_1_big.png",
-    "/songs/assets/common/coaches/{1}_coach_2_big.png",
-    "/songs/assets/common/coaches/{1}_coach_3_big.png",
-    "/songs/assets/common/coaches/{1}_coach_4_big.png",
-    "/songs/data/moves/{0}_moves0.json",
-    "/songs/data/moves/{0}_moves1.json",
-    "/songs/data/moves/{0}_moves2.json",
-    "/songs/data/moves/{0}_moves3.json",
+    "/songs/{0}/assets/web/{1}.jpg",
+    "/songs/{0}/assets/web/{1}_small.jpg",
+    "/songs/{0}/assets/web/pictos-sprite.png",
+    "/songs/{0}/assets/web/pictos-sprite.css",
+    "/songs/{0}/assets/web/pictos-sprite.css",
+    "/songs/{0}/assets/web/{0}.ogg",
+    "/songs/{0}/assets/web/{0}.mp3",
+    "/songs/{0}/assets/common/coaches/{1}_coach_1.png",
+    "/songs/{0}/assets/common/coaches/{1}_coach_2.png",
+    "/songs/{0}/assets/common/coaches/{1}_coach_3.png",
+    "/songs/{0}/assets/common/coaches/{1}_coach_4.png",
+    "/songs/{0}/assets/common/coaches/{1}_coach_1_big.png",
+    "/songs/{0}/assets/common/coaches/{1}_coach_2_big.png",
+    "/songs/{0}/assets/common/coaches/{1}_coach_3_big.png",
+    "/songs/{0}/assets/common/coaches/{1}_coach_4_big.png",
+    "/songs/{0}/data/moves/{0}_moves0.json",
+    "/songs/{0}/data/moves/{0}_moves1.json",
+    "/songs/{0}/data/moves/{0}_moves2.json",
+    "/songs/{0}/data/moves/{0}_moves3.json",
 	"/dist/bundle/{0}.zip",
 	"/dist/bundle/{0}_1.zip",
 	"/dist/bundle/{0}_2.zip",
@@ -54,8 +54,8 @@ if __name__ == '__main__':
 
         for file_path in files_to_download:
             # create the remote url and local path strings
-            remote_url = SONG_BASE_URL + song_name + file_path.format(song_name, song_name.lower())
-            local_path = LOCAL_PATH + song_name + file_path.format(song_name, song_name.lower())
+            remote_url = SONG_BASE_URL + file_path.format(song_name, song_name.lower())
+            local_path = LOCAL_PATH + file_path.format(song_name, song_name.lower())
 
             print(f"\nDownloading file:", remote_url, end='')
 
